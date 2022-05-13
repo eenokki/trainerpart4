@@ -61,6 +61,7 @@ function Addtraining(props) {
                                 value={training.date}
                                 onChange={newDate => dateChanged(newDate)}
                                 label="Date"
+                                maxDateMessage=""
                             />
                         </Fragment>
                     </MuiPickersUtilsProvider>
