@@ -45,7 +45,7 @@ function Edittraining(props) {
                 Edit
             </Button>
             <Dialog open={open} onClose={handleClose}>
-                <DialogTitle>Edit Customer</DialogTitle>
+                <DialogTitle>Edit Training</DialogTitle>
                 <DialogContent>
                     <TextField
                         autoFocus
