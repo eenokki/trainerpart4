@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React, { Fragment } from "react";
 import { Button } from "uiw";
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -33,13 +33,13 @@ function Addtraining(props) {
         setTraining({ ...training, date: newDate.toISOString() });
     }
 
-
     return (
         <div>
             <Button style={{ margin: 10 }} size="small" icon="file-add" type="success" onClick={handleClickOpen}>
                 Add Training
             </Button>
             <Dialog open={open} onClose={handleClose}>
+
                 <DialogTitle>Add new training</DialogTitle>
                 <DialogContent>
                     <TextField
@@ -53,16 +53,16 @@ function Addtraining(props) {
                     />
 
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                    <Fragment>
-                    <DateTimePicker
-                        autoOk
-                        ampm={false}
-                        disableFuture
-                        value={training.date}
-                        onChange={newDate => dateChanged(newDate)}
-                        label="Date"
-                    />
-                    </Fragment>  
+                        <Fragment>
+                            <DateTimePicker
+                                autoOk
+                                ampm={false}
+                                disableFuture
+                                value={training.date}
+                                onChange={newDate => dateChanged(newDate)}
+                                label="Date"
+                            />
+                        </Fragment>
                     </MuiPickersUtilsProvider>
 
                     <TextField

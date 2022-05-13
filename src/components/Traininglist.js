@@ -9,6 +9,7 @@ import Edittraining from './Edittraining';
 
 function Traininglist() {
     const [trainings, setTrainings] = useState([]);
+    //const [participant, setParticipant] = useState('');
 
     useEffect(() => fetchData(), []);
 
