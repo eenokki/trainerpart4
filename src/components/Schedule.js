@@ -26,10 +26,10 @@ function Schedule(props) {
 
     const event = trainings.map((training) =>{
 
-        return {
+        return {    
             title: training.activity + " - " + training.customer.firstname + " "
             + training.customer.lastname,
-        
+     
             start: new Date(training.date),
 
             end: addMinutes(new Date (training.date), parseInt(training.duration)),

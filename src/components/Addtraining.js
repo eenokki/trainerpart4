@@ -58,13 +58,13 @@ function Addtraining(props) {
                             <DateTimePicker
                                 autoOk
                                 ampm={false}
-                                disableFuture
+                                //disableFuture
                                 value={training.date}
                                 onChange={newDate => dateChanged(newDate)}
                                 label="Date"
                                 
                                 //workaround to disable maxDate and maxDateMessage
-                                maxDateMessage=""
+                                //maxDateMessage=""
                             />
                         </Fragment>
                     </MuiPickersUtilsProvider>

@@ -17,6 +17,7 @@ function Traininglist() {
         fetch('https://customerrest.herokuapp.com/api/trainings')
             .then(response => response.json())
             .then(data => setTrainings(data.content))
+            .catch(err =>console.error(err)) 
     }
 
     const deleteTraining = (link) => {
@@ -61,6 +62,7 @@ function Traininglist() {
                     fetch(row.value)
                     .then(response => response.json())
                     .then(data => setParticipant((data.firstname) + ' ' + (data.lastname)))
+                    .catch(err =>console.error(err))   
                 return (participant)
             }
         },
