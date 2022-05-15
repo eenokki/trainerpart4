@@ -7,6 +7,8 @@ import Addcustomer from './Addcustomer';
 import Addtraining from './Addtraining';
 import Editcustomer from './Editcustomer';
 
+import {CSVLink} from 'react-csv';
+
 
 function Customerlist(){
     const [customers, setCustomers] = useState([]);   
@@ -121,7 +123,8 @@ function Customerlist(){
   return(
 
     <div>
-         <Addcustomer saveCustomer={saveCustomer}/>
+        <CSVLink data={customers} filename="customers.csv">Download a file of customers</CSVLink>
+        <Addcustomer saveCustomer={saveCustomer}/>
         <ReactTable filterable={true} data={customers} columns={columns}/>
     </div>
   );

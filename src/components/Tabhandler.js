@@ -5,6 +5,7 @@ import 'react-tabs/style/react-tabs.css';
 
 import Customerlist from './Customerlist';
 import Traininglist from './Traininglist';
+import Schedule from './Schedule';
 
 function Tabhandler() {
  
@@ -14,6 +15,7 @@ function Tabhandler() {
             <Tab>Home</Tab>
             <Tab>Customers</Tab>
             <Tab>Trainings</Tab>
+            <Tab>Calendar</Tab>
         </TabList>
         <TabPanel>
             <h2>Welcome!</h2>
@@ -23,6 +25,9 @@ function Tabhandler() {
         </TabPanel>
         <TabPanel>
             <Traininglist/>
+        </TabPanel>
+        <TabPanel>
+            <Schedule/>
         </TabPanel>
     </Tabs>
         )

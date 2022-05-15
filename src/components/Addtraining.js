@@ -13,6 +13,7 @@ function Addtraining(props) {
     const [training, setTraining] = React.useState({
         date: '', duration: '', activity: '', customer: props.training.links[0].href
     })
+
     const handleClickOpen = () => {
         setOpen(true);
     };
@@ -61,6 +62,8 @@ function Addtraining(props) {
                                 value={training.date}
                                 onChange={newDate => dateChanged(newDate)}
                                 label="Date"
+                                
+                                //workaround to disable maxDate and maxDateMessage
                                 maxDateMessage=""
                             />
                         </Fragment>
